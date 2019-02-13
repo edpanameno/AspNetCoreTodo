@@ -27,7 +27,13 @@ namespace AspNetCoreTodo.Services
                 DueAt = DateTimeOffset.Now.AddDays(3)
             };
 
-            return Task.FromResult(new [] { item1, item2, item3 });
+            var item4 = new TodoItem
+            {
+                Title = "Fix iphone battery/internal antenna",
+                DueAt = DateTimeOffset.Now.AddMonths(3)
+            };
+
+            return Task.FromResult(new [] { item1, item2, item3, item4 });
         }
     }
 }
